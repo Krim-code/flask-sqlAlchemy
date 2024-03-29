@@ -52,6 +52,7 @@ def register():
                          city=request.form['city'], user_id = u.id)
             db.session.add(p)
             db.session.commit()
+            1
         except:
             db.session.rollback()
             print("Ошибка добавления в бд")
